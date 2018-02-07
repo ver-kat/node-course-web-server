@@ -48,21 +48,26 @@ app.get('/', (req, res)=>{
     // });
     
     res.render('welcome.hbs', {
-        pageTitle: 'Welcome Page',
+        pageTitle: 'Welcome to My NodeJS Project Page',
         //currentYear: new Date().getFullYear(),
-        welcomeMessage: 'Welcome and such'
+        welcomeMessage: 'I am learning NodeJS and making a website while I do it. Not much to see here, all the work is on the back end!'
     });
 });
 
 app.get('/about', (req, res)=>{
     //res.send('About page');
     res.render('about.hbs', {
-        pageTitle: 'About Page',
+        pageTitle: 'My NodeJS Project About Page',
         //currentYear: new Date().getFullYear(),
         //welcomeMessage: 'Welcome and such'
     });
 });
 
+app.get('/projects', (req, res)=>{
+    res.render('projects.hbs', {
+        pageTitle: 'My NodeJS Projects Page'
+    });
+});
 
 app.get('/bad', (req, res)=>{
     res.send({
